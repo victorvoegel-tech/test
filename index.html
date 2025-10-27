@@ -4,95 +4,176 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechNova Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Styles généraux */
+    /* Styles globaux */
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #0078d7;
+      font-family: 'Inter', sans-serif;
       color: #fff;
-      padding: 30px 20px;
-      text-align: center;
+      background-color: #f4f4f4;
+    }
+    a { text-decoration: none; }
+
+    /* Header / Hero */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 10%;
+      background-color: #1f1f3f;
+      flex-wrap: wrap;
     }
     header h1 {
-      margin: 0;
       font-size: 36px;
+      margin: 0;
+      font-weight: 700;
+      color: #fff;
     }
-    main {
-      padding: 20px;
-      max-width: 900px;
-      margin: 0 auto;
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+      background-color: #1f1f3f;
+      flex-wrap: wrap;
+    }
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+      margin-right: 40px;
+    }
+    .hero-text h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #ddd;
+      line-height: 1.6;
+    }
+    .hero-text input[type="email"] {
+      padding: 12px 15px;
+      border: none;
+      border-radius: 6px;
+      margin-right: 10px;
+      font-size: 16px;
+    }
+    .hero-text button {
+      padding: 12px 20px;
+      background-color: #7f5af0;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .hero-text button:hover {
+      background-color: #6a46d0;
+    }
+
+    .hero-img {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+    .hero-img img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Services section */
+    section.services {
       background-color: #fff;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      margin-top: 30px;
+      color: #333;
+      padding: 60px 10%;
+      border-radius: 12px 12px 0 0;
+      margin-top: -40px;
+    }
+    section.services h2 {
+      font-size: 32px;
       margin-bottom: 30px;
     }
-    h2 {
-      color: #0078d7;
+    .services-list {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
     }
-    ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
+    .service-card {
+      background-color: #f9f9f9;
+      flex: 1;
+      min-width: 250px;
       padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
-    a {
-      color: #0078d7;
-      text-decoration: none;
+    .service-card h3 {
+      margin-top: 0;
+      color: #1f1f3f;
     }
+
+    /* Contact section */
+    section.contact {
+      background-color: #1f1f3f;
+      color: #fff;
+      padding: 60px 10%;
+      text-align: center;
+    }
+    section.contact h2 { margin-bottom: 20px; }
+    section.contact p { margin: 8px 0; }
+    section.contact a { color: #7f5af0; }
   </style>
 </head>
 <body>
 
-  <!-- En-tête -->
+  <!-- Header -->
   <header>
-    <h1>TechNova Solutions</h1>
+    <h1>TechNova</h1>
   </header>
 
-  <!-- Contenu principal -->
-  <main>
-    <!-- Description -->
-    <section>
-      <h2>À propos de nous</h2>
-      <p>
-        TechNova Solutions est une entreprise innovante spécialisée dans le développement de solutions technologiques pour les PME et les grandes entreprises. Notre mission est d'aider nos clients à optimiser leurs processus grâce à des outils numériques efficaces et personnalisés.
-      </p>
-    </section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Votre partenaire pour l’innovation digitale</h2>
+      <p>TechNova Solutions fournit des outils numériques sur mesure pour les entreprises souhaitant optimiser leurs processus et développer leur croissance.</p>
+      <input type="email" placeholder="Votre email">
+      <button>Demander une démo</button>
+    </div>
+    <div class="hero-img">
+      <img src="https://via.placeholder.com/400x300" alt="Illustration TechNova">
+    </div>
+  </section>
 
-    <!-- Services -->
-    <section>
-      <h2>Nos Services</h2>
-      <ul>
-        <li>Développement de sites web et applications sur mesure</li>
-        <li>Consulting en transformation digitale</li>
-        <li>Maintenance et support informatique 24/7</li>
-      </ul>
-    </section>
+  <!-- Services -->
+  <section class="services">
+    <h2>Nos services</h2>
+    <div class="services-list">
+      <div class="service-card">
+        <h3>Développement Web & App</h3>
+        <p>Création de sites web et applications sur mesure adaptés à vos besoins.</p>
+      </div>
+      <div class="service-card">
+        <h3>Consulting Digital</h3>
+        <p>Accompagnement pour votre transformation digitale et optimisation des processus.</p>
+      </div>
+      <div class="service-card">
+        <h3>Support 24/7</h3>
+        <p>Assistance et maintenance informatique continue pour votre entreprise.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section>
-      <h2>Contactez-nous</h2>
-      <p>Email : <a href="mailto:contact@technova.com">contact@technova.com</a></p>
-      <p>Téléphone : +33 1 23 45 67 89</p>
-      <p>Adresse : 10 Rue de l'Innovation, 75000 Paris, France</p>
-    </section>
-  </main>
-
-  <!-- Pied de page -->
-  <footer>
-    &copy; 2025 TechNova Solutions. Tous droits réservés.
-  </footer>
+  <!-- Contact -->
+  <section class="contact">
+    <h2>Contactez-nous</h2>
+    <p>Email : <a href="mailto:contact@technova.com">contact@technova.com</a></p>
+    <p>Téléphone : +33 1 23 45 67 89</p>
+    <p>Adresse : 10 Rue de l'Innovation, 75000 Paris, France</p>
+  </section>
 
 </body>
 </html>
